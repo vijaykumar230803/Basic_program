@@ -4,6 +4,8 @@ const N = prompt("Enter Input NO: ");
 
 let output = ""
 
+let array =[]
+
 for (let i = 1; i <= N; i += 1) {
 
   if (i % 3== 0 && i % 5== 0) {
