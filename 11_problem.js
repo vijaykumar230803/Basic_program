@@ -2,17 +2,21 @@ const prompt = require("prompt-sync")();
 
 const N = parseInt(prompt("Enter Input NO:"));
 
-for (let i = 2; i < N; i+=1) {
- 
-    let Z = true
+if (N <= 1) {
+  console.log(N, ' is not a prime number.');
+} else {
+  let Prime = true;
 
-  for (let j = 2; j < i; j+=1) {
-    if (i % j== 0) {
-      Z = false
-     
+  for (let i = 2; i * i <= N; i+= 1) {
+    if (N % i == 0) {
+      Prime = false;
+      break;
     }
   }
-  if (Z) {
-    console.log("output:",i)
+
+  if (Prime) {
+    console.log(N, ' is a prime number.');
+  } else {
+    console.log(N, ' is not a prime number.');
   }
 }
