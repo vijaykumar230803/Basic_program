@@ -7,7 +7,7 @@ if (N <= 1) {
 } else {
   let Prime = true;
 
-  for (let i = 2; i * i <= N; i+= 1) {
+  for (let i = 2; i * i <= N; i+= 1) 
     if (N % i == 0) {
       Prime = false;
       break;
@@ -19,4 +19,3 @@ if (N <= 1) {
   } else {
     console.log(N, ' is not a prime number.');
   }
-}
